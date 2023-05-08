@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin Taillon's Resume</title>
+    <style>
+      @page {
+        size: letter portrait;
+        margin: 0;
+      }
+
+      @media screen {
+        body {
+          margin: 0 auto;
+          width: max(calc(100% - 48rem), 48rem);
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+      }
+
+      :root {
+        font-family: Tahoma;
+      }
+
+      mark {
+        background-color: transparent;
+        font-size: 1.025em;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      body > section {
+        margin: 1rem;
+      }
+
+      body > section:not(.no-break) {
+        break-after: page;
+      }
+
+      article {
+        break-inside: avoid-page;
+      }
+
+      #contact-info th {
+        text-align: left;
+        border-spacing: 0.25rem 0.125rem;
+      }
+
+      .time-span {
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="profile">
+      <table id="contact-info">
+        <tr>
+          <th>Full name</th>
+          <td>Benjamin Taillon</td>
+        </tr>
+        <tr>
+          <th>Email address</th>
+          <td>taillonbenjamin@gmail.com</td>
+        </tr>
+        <tr>
+          <th>US Phone number</th>
+          <td>940-205-9913</td>
+        </tr>
+        <tr>
+          <th>US residency status</th>
+          <td>
+            Non-citizen permanent resident
+            <span class="decoration">&#32;🥳</span>
+          </td>
+        </tr>
+      </table>
+      <hr />
+      <h1>About me</h1>
+      <h2>My background and my passion</h2>
+      <p>
+        I learned to program like I learned to speak. I've been a passionate
+        developer since I was around nine years old I was home-schooled until I
+        was 16 years old and had almost all day to do whatever I wanted; I spent
+        most of that time programming and experimenting with various
+        technologies.
+      </p>
+      <p>
+        My passion is overwhelmingly to learn new things, especially things
+        related to computers. I especially tend to enjoy things related to web
+        development, CI/CD, or infrastructure. There's never enough time to do
+        everything I want.
+      </p>
+      <h2>My values</h2>
+      <p>
+        I value honesty, empathy, and emotional intelligence; I believe they are
+        extremely important in most settings, especially a team. I work very
+        well with most people.
+      </p>
+      <h2>One of my biggest strengths</h2>
+      <p>
+        I'm extremely self-sufficient. I grew up too impatient to ask for help,
+        wanting to fix my problems myself by searching on Google. I like to dig
+        to understand problems and find solutions. I've learned to ask for help
+        when needed, but I have no problem figuring things out by myself.
+      </p>
+      <h2>My free time</h2>
+      <p>
+        Outside working hours, I like to research and experiment with various
+        technologies. Most often, I research technologies purely for fun or
+        curiosity. For instance, in my free time, I've learned how to use:
+      </p>
+      <ul>
+        <li>
+          <mark>Docker</mark> (and <mark>Docker Compose</mark>)
+          <ul>
+            <li>
+              I've been using containers to isolate programs and games running
+              on a home server for at-least 3 years (January 2020).
+            </li>
+            <li>
+              I also installed <mark>Dokku</mark> in a container to deploy
+              personal test projects.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <mark>Next.js</mark>
+          <ul>
+            <li>I used it to create a simple dashboard for a home server.</li>
+            <li>
+              I also used it to research tooling for a personal project. This
+              time, I experimented with server-side/client-side components,
+              <mark>NextAuth</mark>, <mark>EdgeDB</mark>, and
+              <mark>TypeORM</mark>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <mark>Rust</mark>
+          <ul>
+            <li>
+              I used it to experiment with smart lights using the
+              <mark>UDP protocol</mark>. I made a simple library project to
+              detect my smart lights and I used <mark>Clap</mark> to make a
+              simple CLI project.
+            </li>
+            <li>
+              Also used it a long time ago to make a very simple API to list,
+              start, and stop Linux services on my old home server.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <mark>Google Sheet</mark> and <mark>Google App Script</mark>
+          <ul>
+            <li>
+              I use them frequently to research and make informed decisions.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section id="work-experience">
+      <h1>My work experience</h1>
+      <article>
+        <h2>Software developer, Coveo</h2>
+        <div class="time-span">
+          Since <time datetime="2021-01">January 2021</time>
+        </div>
+        <p>
+          I spent most of my time working on the Headless web library (built
+          with <mark>Redux</mark> and <mark>Typescript</mark>) and the Atomic
+          web components library (built with <mark>Stencil</mark> and
+          <mark>Typescript</mark>) for building search interfaces. Working on
+          these libraries also involved writing some documentation, testing
+          integrations with other frameworks (such as <mark>React</mark>,
+          <mark>Next.js</mark>, <mark>Angular</mark>, and <mark>Vue</mark>),
+          answering questions, etc. You can see the source code and find my
+          contributions here: https://github.com/coveo/ui-kit
+        </p>
+        <p>
+          I wrote end-to-end tests with <mark>Cypress</mark> and I wrote unit
+          tests with <mark>Jest</mark>.
+        </p>
+        <p>
+          I wrote some external documentation, I tested integrations with other
+          frameworks (such as
+          <mark>React</mark>, <mark>Next.js</mark>, <mark>Angular</mark>, and
+          <mark>Vue</mark>), I debugged client implementations, and I wrote
+          design documents.
+        </p>
+        <p>
+          I learned a lot about allocating the right amount of time and effort
+          to the right tasks. There's always a lot more we want to add or
+          improve.
+        </p>
+        <p>
+          Working on web libraries frequently involved finding the right balance
+          between functionality, maintainability and efficiency.
+        </p>
+        <p>
+          I answered a lot of questions from clients and support staff, which
+          taught me a lot about customer needs, how to help them succeed and how
+          to make APIs that are more intuitive to use.
+        </p>
+        <p>
+          I worked a lot on testing and improving accessibility for our Atomic
+          component library and our Search UI component library. I learned a lot
+          about <mark>WCAG</mark> and wrote internal documentation on how to
+          install and test with different screen readers.
+        </p>
+        <p>
+          I worked a lot on tooling and continuous integration for our
+          <code>ui-kit</code> repository. I worked a lot with
+          <mark>NPM Workspaces</mark> (and dependency hoisting),
+          <mark>GitHub Actions</mark>, <mark>Nx</mark> (especially caching),
+          semantic versioning strategies and <mark>Git</mark>.
+        </p>
+      </article>
+      <article>
+        <h2>Intern software developer, Coveo</h2>
+        <div class="time-span">
+          From <time datetime="2019-08">August 2019</time> to
+          <time datetime="2021-01">January 2021</time>
+        </div>
+        <p>
+          Most of my time was dedicated to working on the Coveo Search UI web
+          components library. I worked extensively with <mark>Typescript</mark>,
+          and used <mark>SASS</mark> for styling and <mark>Jasmine</mark> for
+          writing unit tests. You can see the source code and find my
+          contributions here: https://github.com/coveo/search-ui
+        </p>
+        <p>
+          I worked on a bit of continuous integration with
+          <mark>Jenkins</mark> and <mark>Travis</mark>. I also worked a little
+          bit on infrastructure with <mark>Terraform</mark>.
+        </p>
+        <p>
+          I wrote and deployed a very small experiment using
+          <mark>AWS Elastic Beanstalk</mark> and <mark>DynamoDB</mark>.
+        </p>
+        <p>
+          I worked a little bit on an API made with <mark>Go</mark>, and I
+          worked on extracting reference documentation out of it.
+        </p>
+      </article>
+      <article>
+        <h2>Tutor, Cégep Garneau</h2>
+        <div class="time-span">
+          From <time datetime="2017-08">August 2017</time> to
+          <time datetime="2018-05">May 2018</time>
+        </div>
+        <p>
+          I was paid by my college to tutor a few students, helping them with
+          Object-oriented programming 1 and 2 classes.
+        </p>
+      </article>
+    </section>
+    <section id="education" class="no-break">
+      <h1>My education</h1>
+      <article>
+        <h2>DEC, Software Development, Cégep Garneau</h2>
+        <div class="time-span">
+          From <time datetime="2017">2017</time> to
+          <time datetime="2019">2019</time>
+        </div>
+        <p>
+          Completed the 3-year-long (6 semesters) "Techniques de l'informatique"
+          program.
+        </p>
+        <p>
+          The program was especially focused on <mark>C#</mark>
+          <mark>.NET</mark>, <mark>Javascript</mark>, <mark>CSS</mark>, and
+          <mark>HTML</mark>. Amongst other things, other classes in the program
+          taught networking, version control (using <mark>Git</mark>),
+          <mark>Windows Server</mark> (<mark>Active Directory</mark>),
+          <mark>Linux</mark>, databases (<mark>Access</mark>,
+          <mark>MySQL</mark>, <mark>Oracle</mark> and <mark>MongoDB</mark>),
+          management, <mark>Python</mark>, <mark>Java</mark>, etc.
+        </p>
+        <p>
+          I also joined a trip to California to visit different software
+          companies, which was insightful and was a lot of fun.
+        </p>
+      </article>
+    </section>
+    <section id="accomplishments">
+      <h1>My accomplishments</h1>
+      <article>
+        <h2>As a kid, reached Roblox's first page with my game</h2>
+        <p>
+          Since I was about 9 or 10 years old, I spent over 5 years programming
+          games in Roblox using Lua. I saved a lot of virtual currency in the
+          game over time, and spent a lot of it to advertise my games.
+        </p>
+        <p>
+          Eventually, with the collaboration of my brother who built the entire
+          map, we built a small game. I drew a few advertisements and added
+          promotional codes to them, ran them overnight and woke up to the game
+          on the first Games page of the site.
+        </p>
+        <p>
+          The game was pretty terrible since; I didn't add much content and it
+          had too many bugs that I didn't know how to fix. The game only stayed
+          on the first page for about 3 days. It was still a really great
+          experience.
+        </p>
+      </article>
+    </section>
+  </body>
+</html>
