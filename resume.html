@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benjamin Taillon's Resume</title>
     <style>
+      :root {
+        --font-family: Tahoma;
+        --text-small: 1rem;
+        --text-medium: 1.125rem;
+        --text-large: 1.25rem;
+        --text-largest: 1.375rem;
+        --color-link: #00408c;
+        --color-text: #000;
+        --color-accent: #004d40;
+        --color-accent-bold: #00967a;
+        --color-h1: #008a8a;
+        --color-h2: #8a6300;
+        --color-background: #f5f5f5;
+      }
+
       @page {
         size: letter portrait;
         margin: 0;
+      }
+
+      body {
+        background-color: var(--color-background);
+        font-family: var(--font-family);
+        color: var(--color-text);
+        font-size: var(--text-medium);
+      }
+
+      a,
+      a:visited {
+        color: var(--color-link);
       }
 
       @media screen {
@@ -20,21 +47,19 @@
         }
       }
 
-      :root {
-        font-family: Tahoma;
-      }
-
       mark {
         background-color: transparent;
-        font-size: 1.025em;
+        color: var(--color-accent);
       }
 
       h1 {
-        font-size: 1.25rem;
+        font-size: var(--text-largest);
+        color: var(--color-h1);
       }
 
       h2 {
-        font-size: 1.125rem;
+        font-size: var(--text-large);
+        color: var(--color-h2);
       }
 
       body > section {
@@ -49,125 +74,175 @@
         break-inside: avoid-page;
       }
 
-      #contact-info th {
-        text-align: left;
+      #contact-info {
         border-spacing: 0.25rem 0.125rem;
       }
 
+      #contact-info th {
+        text-align: left;
+        color: var(--color-accent-bold);
+      }
+
       .time-span {
-        font-size: 0.8rem;
+        font-size: var(--text-small);
         font-style: italic;
+      }
+
+      .decoration {
+        font-size: var(--text-small);
+      }
+
+      a {
+        white-space: nowrap;
+      }
+    </style>
+    <style>
+      body.print {
+        --text-small: 0.875rem;
+        --text-medium: 1rem;
+        --text-large: 1.125rem;
+        --text-largest: 1.25rem;
+        --color-link: #000;
+        --color-accent: #000;
+        --color-accent-bold: #000;
+        --color-h1: #000;
+        --color-h2: #000;
+        --color-background: #fff;
+      }
+
+      body.print mark {
+        font-weight: bold;
+        font-size: var(--text-small);
       }
     </style>
   </head>
   <body>
     <section id="profile">
       <table id="contact-info">
-        <tr>
-          <th>Full name</th>
-          <td>Benjamin Taillon</td>
-        </tr>
-        <tr>
-          <th>Email address</th>
-          <td>taillonbenjamin@gmail.com</td>
-        </tr>
-        <tr>
-          <th>US Phone number</th>
-          <td>940-205-9913</td>
-        </tr>
-        <tr>
-          <th>US residency status</th>
-          <td>
-            Non-citizen permanent resident
-            <span class="decoration">&#32;🥳</span>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>Full name</th>
+            <td>Benjamin Taillon</td>
+          </tr>
+          <tr>
+            <th>Email address</th>
+            <td>taillonbenjamin@gmail.com</td>
+          </tr>
+          <tr>
+            <th>US Phone number</th>
+            <td>940-205-9913</td>
+          </tr>
+          <tr>
+            <th>US residency status</th>
+            <td>
+              Non-citizen permanent resident
+              <span class="decoration">&#32;🥳</span>
+            </td>
+          </tr>
+          <tr>
+            <th>LinkedIn profile</th>
+            <td>
+              <a href="https://linkedin.benjamintaillon.com"
+                >https://linkedin.benjamintaillon.com</a
+              >
+            </td>
+          </tr>
+        </tbody>
       </table>
       <hr />
       <h1>About me</h1>
-      <h2>My background and my passion</h2>
-      <p>
-        I learned to program like I learned to speak. I've been a passionate
-        developer since I was around nine years old I was home-schooled until I
-        was 16 years old and had almost all day to do whatever I wanted; I spent
-        most of that time programming and experimenting with various
-        technologies.
-      </p>
-      <p>
-        My passion is overwhelmingly to learn new things, especially things
-        related to computers. I especially tend to enjoy things related to web
-        development, CI/CD, or infrastructure. There's never enough time to do
-        everything I want.
-      </p>
-      <h2>My values</h2>
-      <p>
-        I value honesty, empathy, and emotional intelligence; I believe they are
-        extremely important in most settings, especially a team. I work very
-        well with most people.
-      </p>
-      <h2>One of my biggest strengths</h2>
-      <p>
-        I'm extremely self-sufficient. I grew up too impatient to ask for help,
-        wanting to fix my problems myself by searching on Google. I like to dig
-        to understand problems and find solutions. I've learned to ask for help
-        when needed, but I have no problem figuring things out by myself.
-      </p>
-      <h2>My free time</h2>
-      <p>
-        Outside working hours, I like to research and experiment with various
-        technologies. Most often, I research technologies purely for fun or
-        curiosity. For instance, in my free time, I've learned how to use:
-      </p>
-      <ul>
-        <li>
-          <mark>Docker</mark> (and <mark>Docker Compose</mark>)
-          <ul>
-            <li>
-              I've been using containers to isolate programs and games running
-              on a home server for at-least 3 years (January 2020).
-            </li>
-            <li>
-              I also installed <mark>Dokku</mark> in a container to deploy
-              personal test projects.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <mark>Next.js</mark>
-          <ul>
-            <li>I used it to create a simple dashboard for a home server.</li>
-            <li>
-              I also used it to research tooling for a personal project. This
-              time, I experimented with server-side/client-side components,
-              <mark>NextAuth</mark>, <mark>EdgeDB</mark>, and
-              <mark>TypeORM</mark>.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <mark>Rust</mark>
-          <ul>
-            <li>
-              I used it to experiment with smart lights using the
-              <mark>UDP protocol</mark>. I made a simple library project to
-              detect my smart lights and I used <mark>Clap</mark> to make a
-              simple CLI project.
-            </li>
-            <li>
-              Also used it a long time ago to make a very simple API to list,
-              start, and stop Linux services on my old home server.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <mark>Google Sheet</mark> and <mark>Google App Script</mark>
-          <ul>
-            <li>
-              I use them frequently to research and make informed decisions.
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <article>
+        <h2>My background and my passion</h2>
+        <p>
+          I learned to program like I learned to speak. I've been a passionate
+          developer since I was around nine years old I was home-schooled until
+          I was 16 years old and had almost all day to do whatever I wanted; I
+          spent most of that time programming and experimenting with various
+          technologies.
+        </p>
+        <p>
+          My passion is overwhelmingly to learn new things, especially things
+          related to computers. I especially tend to enjoy things related to web
+          development, CI/CD, or infrastructure. There's never enough time to do
+          everything I want.
+        </p>
+      </article>
+      <article>
+        <h2>My values</h2>
+        <p>
+          I value honesty, empathy, and emotional intelligence; I believe they
+          are extremely important in most settings, especially a team. I work
+          very well with most people.
+        </p>
+      </article>
+      <article>
+        <h2>One of my biggest strengths</h2>
+        <p>
+          I'm extremely self-sufficient. I grew up too impatient to ask for
+          help, wanting to fix my problems myself by searching on Google. I like
+          to dig to understand problems and find solutions. I've learned to ask
+          for help when needed, but I have no problem figuring things out by
+          myself.
+        </p>
+      </article>
+      <article>
+        <h2>My free time</h2>
+        <p>
+          Outside working hours, I like to research and experiment with various
+          technologies. Most often, I research technologies purely for fun or
+          curiosity. For instance, in my free time, I've learned how to use:
+        </p>
+        <ul>
+          <li>
+            <mark>Docker</mark> (and <mark>Docker Compose</mark>)
+            <ul>
+              <li>
+                I've been using containers to isolate programs and games running
+                on a home server for at-least 3 years (January 2020).
+              </li>
+              <li>
+                I also installed <mark>Dokku</mark> in a container to deploy
+                personal test projects.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <mark>Next.js</mark>
+            <ul>
+              <li>I used it to create a simple dashboard for a home server.</li>
+              <li>
+                I also used it to research tooling for a personal project. This
+                time, I experimented with server-side/client-side components,
+                <mark>NextAuth</mark>, <mark>EdgeDB</mark>, and
+                <mark>TypeORM</mark>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <mark>Rust</mark>
+            <ul>
+              <li>
+                I used it to experiment with smart lights using the
+                <mark>UDP protocol</mark>. I made a simple library project to
+                detect my smart lights and I used <mark>Clap</mark> to make a
+                simple CLI project.
+              </li>
+              <li>
+                Also used it a long time ago to make a very simple API to list,
+                start, and stop Linux services on my old home server.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <mark>Google Sheet</mark> and <mark>Google App Script</mark>
+            <ul>
+              <li>
+                I use them frequently to research and make informed decisions.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
     </section>
     <section id="work-experience">
       <h1>My work experience</h1>
@@ -185,7 +260,10 @@
           integrations with other frameworks (such as <mark>React</mark>,
           <mark>Next.js</mark>, <mark>Angular</mark>, and <mark>Vue</mark>),
           answering questions, etc. You can see the source code and find my
-          contributions here: https://github.com/coveo/ui-kit
+          contributions here:
+          <a href="https://github.com/coveo/ui-kit"
+            >https://github.com/coveo/ui-kit</a
+          >
         </p>
         <p>
           I wrote end-to-end tests with <mark>Cypress</mark> and I wrote unit
@@ -237,7 +315,10 @@
           components library. I worked extensively with <mark>Typescript</mark>,
           and used <mark>SASS</mark> for styling and <mark>Jasmine</mark> for
           writing unit tests. You can see the source code and find my
-          contributions here: https://github.com/coveo/search-ui
+          contributions here:
+          <a href="https://github.com/coveo/search-ui"
+            >https://github.com/coveo/search-ui</a
+          >
         </p>
         <p>
           I worked on a bit of continuous integration with
