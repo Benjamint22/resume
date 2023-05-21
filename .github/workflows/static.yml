@@ -33,11 +33,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: Generate PDF
+        uses: fifsky/html-to-pdf-action@35abfebcc77bb99c643a6d9218fc4ef24cb1d3ec
+        with:
+          htmlFile: ./static/index.html
+          outputFile: ./static/resume.pdf
+          pdfOptions: '{"format": "Letter", "margin": {"top": "5mm", "left": "5mm", "right": "5mm", "bottom": "5mm"}}'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
-          path: './static'
+          path: "./static"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
