@@ -7,6 +7,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Generate PDF
         uses: fifsky/html-to-pdf-action@35abfebcc77bb99c643a6d9218fc4ef24cb1d3ec
         with:
