@@ -11,10 +11,10 @@ jobs:
         uses: fifsky/html-to-pdf-action@35abfebcc77bb99c643a6d9218fc4ef24cb1d3ec
         with:
           htmlFile: ./static/index.html
-          outputFile: ./out/resume.pdf
+          outputFile: ./resume.pdf
           pdfOptions: '{"format": "Letter", "margin": {"top": "5mm", "left": "5mm", "right": "5mm", "bottom": "5mm"}}'
       - name: upload pdf
         uses: actions/upload-artifact@v3
         with:
           name: pdf-resume
-          path: out/resume.pdf
+          path: resume.pdf
