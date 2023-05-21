@@ -1,12 +1,10 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "serve resume.html"
+    "start": "serve static"
   },
-  "author": "",
+  "author": "Benjamin Taillon",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.8.8",
