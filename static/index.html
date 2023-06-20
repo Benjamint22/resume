@@ -19,6 +19,8 @@
         --color-h1: #8a6300;
         --color-h2: #008a8a;
         --color-background: #f5f5f5;
+        --color-thick-border: #000;
+        --size-thick-border: 3px;
       }
 
       body {
@@ -31,6 +33,10 @@
       a,
       a:visited {
         color: var(--color-link);
+      }
+
+      hr {
+        border-top: var(--size-thick-border) solid var(--color-thick-border);
       }
 
       @media screen {
@@ -69,6 +75,8 @@
       article {
         break-inside: avoid-page;
         margin: 1.5rem 0;
+        padding-left: 2rem;
+        border: var(--size-thick-border) solid var(--color-thick-border);
       }
 
       #contact-info {
