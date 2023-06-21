@@ -106,10 +106,15 @@
     <style>
       @page {
         size: letter portrait;
-        margin: var(--margin-vertical) 0;
+        margin: 30cm;
       }
 
       @media print {
+        body,
+        body > section {
+          margin: 0;
+        }
+
         body {
           --text-small: 0.875rem;
           --text-medium: 1rem;
